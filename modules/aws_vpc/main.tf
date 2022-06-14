@@ -5,6 +5,6 @@ resource "aws_vpc" "main" {
   cidr_block       = "10.0.0.0/16"
 
   tags = {
-    Name = "${var.env}-${var.vpc_name}"
+    Name = "${terraform.workspace}-${var.vpc_name}"
   }
 }
